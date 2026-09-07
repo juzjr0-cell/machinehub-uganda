@@ -1,1 +1,43 @@
-<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>MachineHub Uganda Admin</title><style>body{font-family:system-ui;margin:30px;max-width:900px}input,button{padding:10px;margin:4px}pre{background:#f4f4f4;padding:15px;overflow:auto}</style></head><body><h1>MachineHub Uganda — Admin</h1><p>Stage 6 admin API smoke-test console.</p><input id="base" value="http://localhost:3000" size="35"><input id="token" placeholder="ADMIN JWT" size="55"><button onclick="load()">Load overview</button><pre id="out">Enter an admin JWT and click Load overview.</pre><script>async function load(){const b=document.getElementById('base').value,t=document.getElementById('token').value;const r=await fetch(b+'/api/admin/overview',{headers:{Authorization:'Bearer '+t}});document.getElementById('out').textContent=await r.text()}</script></body></html>
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="MachineHub Uganda — Fund Businesses. Track Progress. Share Revenue.">
+<title>MachineHub Uganda</title><link rel="stylesheet" href="styles.css">
+</head><body>
+<header><div class="nav"><a class="brand" href="#home"><span>MH</span> MachineHub <b>Uganda</b></a>
+<nav><a href="#how">How it works</a><a href="#businesses">Business Units</a><a href="#about">About</a><a href="#contact">Contact</a></nav>
+<a class="btn primary" href="#register">Get started</a></div></header>
+
+<main>
+<section id="home" class="hero"><div class="wrap hero-grid"><div>
+<div class="eyebrow">🇺🇬 BUILT FOR UGANDA</div>
+<h1>Fund real businesses.<em> Track their progress.</em></h1>
+<p class="lead">MachineHub Uganda connects people with clearly described, income-generating business units. Review the business model, activity and terms before you contribute.</p>
+<div class="actions"><a class="btn primary big" href="#businesses">Explore Business Units</a><a class="btn outline big" href="#how">How it works</a></div>
+<div class="trust"><span>💰 <b>UGX</b> Uganda Shillings</span><span>📈 Performance tracking</span><span>🔎 Clear disclosures</span></div>
+</div>
+<div class="dash"><div class="dash-top"><span>● Business activity</span><b>SANDBOX</b></div><small>Example available balance</small><h2>UGX 125,000</h2>
+<div class="mini"><div>Active units<strong>3</strong></div><div>Contributions<strong>UGX 75K</strong></div></div>
+<div class="activity"><p>🍿 <span>Popcorn Unit</span><i>Active</i></p><p>🥤 <span>Juice Unit</span><i>Active</i></p><p>🚗 <span>Car Wash Unit</span><i>Reviewing</i></p></div>
+<small>Illustrative dashboard — not a statement of actual earnings.</small></div></div></section>
+
+<section id="businesses"><div class="wrap"><div class="heading"><div><div class="eyebrow">BUSINESS OPPORTUNITIES</div><h2>Explore Business Units</h2></div><p>Every unit should show its minimum contribution, operating period, business model, risks and actual performance information.</p></div>
+<div class="cards">
+<article><strong>🍿</strong><label>From UGX 5,000</label><h3>Popcorn Business Unit</h3><p>Small-scale popcorn sales with recorded operating activity.</p><footer><span>15 days</span><a href="#register">View unit →</a></footer></article>
+<article><strong>🥤</strong><label>From UGX 10,000</label><h3>Juice Business Unit</h3><p>Fresh juice sales with revenue and expense tracking.</p><footer><span>10 days</span><a href="#register">View unit →</a></footer></article>
+<article><strong>🚗</strong><label>From UGX 20,000</label><h3>Car Wash Unit</h3><p>A service business tracked through real operating results.</p><footer><span>15 days</span><a href="#register">View unit →</a></footer></article>
+<article><strong>🧺</strong><label>From UGX 50,000</label><h3>Laundry Unit</h3><p>Laundry services with transparent activity and cost records.</p><footer><span>30 days</span><a href="#register">View unit →</a></footer></article>
+</div></div></section>
+
+<section id="how" class="soft"><div class="wrap"><div class="center"><div class="eyebrow">SIMPLE & TRANSPARENT</div><h2>How MachineHub works</h2><p>Our goal is to make every business unit understandable before you decide to participate.</p></div>
+<div class="steps"><article><b>1</b><h3>Create an account</h3><p>Register with your Uganda mobile number and complete required verification.</p></article><article><b>2</b><h3>Choose a business unit</h3><p>Review the model, minimum contribution, period and risks.</p></article><article><b>3</b><h3>Use the approved payment flow</h3><p>The current demonstration environment uses sandbox payments.</p></article><article><b>4</b><h3>Track performance</h3><p>See contributions, expenses, revenue records and distributions where applicable.</p></article></div></div></section>
+
+<section id="about"><div class="wrap two"><div><div class="eyebrow">OUR APPROACH</div><h2>Built around real business activity</h2><p>MachineHub Uganda is designed around identifiable business units rather than artificial balances or guaranteed returns.</p><p>Business results can change. Any revenue sharing or distribution must depend on actual business performance and applicable contractual terms.</p><div class="checks">✓ Business-unit records<br>✓ Revenue and expense tracking<br>✓ Transaction history<br>✓ Clear risk disclosures</div></div>
+<div class="notice"><h3>Important information</h3><p><b>This public website is a demonstration.</b> Payment processing is not enabled here and no profit is guaranteed.</p><p>The UGX 10,000 activation amount, where used, is an <b>account activation/service fee</b> and is separate from any business-unit contribution.</p><p>Before accepting public funds or offering any regulated financial product, the operating structure and required approvals must be confirmed with the relevant Ugandan authorities and licensed payment partners.</p></div></div></section>
+
+<section id="register" class="cta"><div class="wrap cta-inner"><div><div class="eyebrow">START YOUR JOURNEY</div><h2>Create your MachineHub account</h2><p>Registration and payments will connect to the secured MachineHub API when the production environment is ready.</p></div><a class="btn white big" href="#contact">Request access</a></div></section>
+
+<section id="contact" class="contact"><div class="wrap center"><div class="eyebrow">CONTACT</div><h2>MachineHub Uganda</h2><p>Customer support: coming soon · Uganda</p><p><b>support@machinehub.ug</b></p></div></section>
+</main>
+<footer><div class="wrap foot"><div><a class="brand" href="#home"><span>MH</span> MachineHub <b>Uganda</b></a><p>Fund Businesses. Track Progress. Share Revenue.</p></div><div><b>Platform</b><a href="#businesses">Business Units</a><a href="#how">How it works</a><a href="#about">About</a></div><div><b>Environment</b><p>Sandbox / Demo</p><p>© 2026 MachineHub Uganda</p></div></div></footer>
+</body></html>
