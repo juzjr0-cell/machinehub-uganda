@@ -1,0 +1,11 @@
+# Production security checklist
+- Replace JWT secret with a strong secret stored outside source control.
+- Disable/remove demo admin credentials.
+- Use HTTPS/TLS.
+- Use a real production database with encrypted backups.
+- Add rate limiting, login lockout, input validation and structured audit logging.
+- Add admin MFA and maker/checker approval for sensitive actions.
+- Store secrets in a secrets manager.
+- Add KYC/identity-provider integration appropriate to the final business model.
+- Keep payment provider credentials server-side; never store mobile-money PINs.
+- Keep sandbox payment routes disabled in production.
